@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kółko i krzyżyk</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div id = "container">
+        <div id = "box_of_boxes">
+            <div class = "box box_1">
+                <input type = "text" class = "xo" maxlength="1" onkeyup="test();" onkeyup = "color();">
+            </div>
+            <div class = "box box_2">
+                <input type = "text" class = "xo" maxlength="1"  onkeyup="test();">
+            </div>
+            <div class = "box box_3">
+                <input type = "text" class = "xo" maxlength="1"  onkeyup="test();">
+            </div>
+            <div class = "box box_4">
+                <input type = "text" class = "xo" maxlength="1"  onkeyup="test();">
+            </div>
+            <div class = "box box_5">
+                <input type = "text" class = "xo" maxlength="1"  onkeyup="test();">
+            </div>
+            <div class = "box box_6">
+                <input type = "text" class = "xo" maxlength="1"  onkeyup="test();">
+            </div>
+            <div class = "box box_7">
+                <input type = "text" class = "xo" maxlength="1"  onkeyup="test();">
+            </div>
+            <div class = "box box_8">
+                <input type = "text" class = "xo" maxlength="1"  onkeyup="test();">
+            </div>
+            <div class = "box box_9">
+                <input type = "text" class = "xo" maxlength="1"  onkeyup="test();">
+            </div>
+        </div>
+        <div id = "bottom">
+            <p id = "result">&nbsp;</p>
+            <input type = "button" id = "button" value = "RESET" onclick = "reload();">
+        </div>    
+    </div>    
+</body>
+    <script>
+        function test(){
+            var xs = document.getElementById("x_score");
+            var os = document.getElementById("x_score");
+            var bx = document.getElementsByClassName("xo");
+            var rs = document.getElementById("result");
+            //Warunki dla X
+            if(bx[0].value == "x" && bx[1].value == "x" && bx[2].value == "x")
+                rs.innerHTML = "Wygrał gracz X";
+            if(bx[3].value == "x" && bx[4].value == "x" && bx[5].value == "x")          rs.innerHTML = "Wygrał gracz X";
+            if(bx[6].value == "x" && bx[7].value == "x" && bx[8].value == "x")
+                rs.innerHTML = "Wygrał gracz X";
+
+            if(bx[0].value == "x" && bx[3].value == "x" && bx[6].value == "x")
+                rs.innerHTML = "Wygrał gracz X";
+            if(bx[1].value == "x" && bx[4].value == "x" && bx[7].value == "x")
+                rs.innerHTML = "Wygrał gracz X";
+            if(bx[2].value == "x" && bx[5].value == "x" && bx[8].value == "x")
+                rs.innerHTML = "Wygrał gracz X";    
+
+            if(bx[0].value == "x" && bx[4].value == "x" && bx[8].value == "x")
+                rs.innerHTML = "Wygrał gracz X";
+            if(bx[2].value == "x" && bx[4].value == "x" && bx[6].value == "x")
+                rs.innerHTML = "Wygrał gracz X";     
+            //Warunki dla O    
+            if(bx[0].value == "o" && bx[1].value == "o" && bx[2].value == "o")
+                rs.innerHTML = "Wygrał gracz O";
+            if(bx[3].value == "o" && bx[4].value == "o" && bx[5].value == "o")          rs.innerHTML = "Wygrał gracz O";
+            if(bx[6].value == "o" && bx[7].value == "o" && bx[8].value == "o")
+                rs.innerHTML = "Wygrał gracz O";
+
+            if(bx[0].value == "o" && bx[3].value == "o" && bx[6].value == "o")
+                rs.innerHTML = "Wygrał gracz O";
+            if(bx[1].value == "o" && bx[4].value == "o" && bx[7].value == "o")
+                rs.innerHTML = "Wygrał gracz O";
+            if(bx[2].value == "o" && bx[5].value == "o" && bx[8].value == "o")
+                rs.innerHTML = "Wygrał gracz O";    
+
+            if(bx[0].value == "o" && bx[4].value == "o" && bx[8].value == "o")
+                rs.innerHTML = "Wygrał gracz O";
+            if(bx[2].value == "o" && bx[4].value == "o" && bx[6].value == "o")
+                rs.innerHTML = "Wygrał gracz O";
+        }
+        function reload(){
+            location.reload();
+        }
+    </script>
+</html>

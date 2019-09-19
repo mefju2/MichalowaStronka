@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vw;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+}
+#box_of_boxes{
+    width: 312px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    border: solid 2px black;
+    width: 100px;
+    height: 100px;
+}
+.xo{
+    width: 96px;
+    height: 95px;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#button{
+    background-color: #fff;
+    border: solid 3px black;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#button:hover{
+    background-color: rgb(255, 243, 136);
+}
+#bottom{
+    text-align: center;
+}
+#bottom #result{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+@media screen and (max-width: 800px){
+    body{
+        height: 100vh;
+    }
+}
