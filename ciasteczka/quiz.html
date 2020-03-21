@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id = "header">
+        <h1>Sesje i ciasteczka w PHP</h1>
+        <div id = "navigation">
+            <a href = "ciasteczka.html">Ciasteczka</a>
+            <a href = "sesje.html">Sesje</a>
+            <a href = "quiz.html">Quiz</a>
+        </div>
+    </div>
+    <div id = "container">
+        <h3>Quiz</h3>
+        
+        <h4>Pyt 1</h4>
+        <div class = "question">
+            <label><input type = "radio" name = "q1" value = "1"> A </label>
+            <label><input type = "radio" name = "q1"> B </label>
+            <label><input type = "radio" name = "q1"> C </label>
+        </div>
+
+        <h4>Pyt 2</h4>
+        <div class = "question">
+            <label><input type = "radio" name = "q2"> A </label>
+            <label><input type = "radio" name = "q2" value = "1"> B </label>
+            <label><input type = "radio" name = "q2"> C </label>
+        </div>
+
+            <input type = "button" value = "klik" onclick = "check();">
+            <p id = "w"></p>
+    </div>
+</body>
+    <script>
+        let w = document.getElementById("w");
+        let q1 = document.getElementsByName("q1");
+        let q2 = document.getElementsByName("q2");
+        let suma = 0;
+
+        function check(){
+            
+                
+                if(q1[0].checked)
+                    suma += 1;
+
+                if(q2[1].checked)
+                    suma += 1;    
+                    
+            
+            w.innerHTML = suma + ` ${(suma/2)*100}%`;
+            suma = 0;    
+            }
+    </script>
+</html>
